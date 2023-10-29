@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="_04_Scanner_JOptionalPane_Escape_System.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_07_StringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_11_Method.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="String,">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_05_Math.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_05_Math.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_06_Cast_Random.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_06_Cast_Random.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_07_String.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_07_String.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_11_Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_10_Method.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,33 +81,7 @@
       <recent name="com.hamitmizrak.javase" />
     </key>
   </component>
-  <component name="RunManager" selected="Application._07_StringBuilder">
-    <configuration name="_04_Scanner_JOptionalPane_Escape_System" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._04_Scanner_JOptionalPane_Escape_System" />
-      <module name="JavaCore_FullStack12.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_05_Math" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._05_Math" />
-      <module name="JavaCore_FullStack12.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application._08_Conditional_Break_Continue_Return_2">
     <configuration name="_06_Cast_Random" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._06_Cast_Random" />
       <module name="JavaCore_FullStack12.main" />
@@ -150,13 +121,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_08_Conditional_Break_Continue_Return" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._08_Conditional_Break_Continue_Return" />
+      <module name="JavaCore_FullStack12.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_08_Conditional_Break_Continue_Return_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._08_Conditional_Break_Continue_Return_2" />
+      <module name="JavaCore_FullStack12.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._08_Conditional_Break_Continue_Return_2" />
+        <item itemvalue="Application._08_Conditional_Break_Continue_Return" />
         <item itemvalue="Application._07_StringBuilder" />
         <item itemvalue="Application._07_String" />
         <item itemvalue="Application._06_Cast_Random" />
-        <item itemvalue="Application._05_Math" />
-        <item itemvalue="Application._04_Scanner_JOptionalPane_Escape_System" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698587708996</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="String,">
+      <option name="closed" value="true" />
+      <created>1698591261340</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698591261340</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -253,7 +258,74 @@
     <MESSAGE value="_02_Variable.java and Common Rules" />
     <MESSAGE value="_03_Operator" />
     <MESSAGE value="_04_Scanner_JOptionalPane_Escape_System.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="_04_Scanner_JOptionalPane_Escape_System.java" />
+    <MESSAGE value="String," />
+    <option name="LAST_COMMIT_MESSAGE" value="String," />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_08_Conditional_Break_Continue_Return_2.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
