@@ -40,8 +40,5 @@ public class _03_Examples {
 
         var kalan = x1 % x2;
         System.out.println(kalan);
-
-
-
     }
 }
