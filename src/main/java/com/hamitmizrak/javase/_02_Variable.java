@@ -4,6 +4,8 @@ public class _02_Variable {
     public static void main(String[] args) {
 
         // Stack memory- Heap Memory
+        // primitive  type ile Wrapper Type arasındaki farklar nelerdir ?
+
         // primitive  type (ilke Type)
         // ----------------------------
         // byte
