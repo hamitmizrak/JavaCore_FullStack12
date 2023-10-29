@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="_02_Variable.java">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="_02_Variable.java and Common Rules">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_03_Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_02_Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_02_Variable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +75,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\spring\JavaCore_FullStack12" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hamitmizrak.javase" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application._02_Variable">
+  <component name="RunManager" selected="Application._03_Operator">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.Main" />
       <module name="JavaCore_FullStack12.main" />
@@ -103,8 +106,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_03_Operator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._03_Operator" />
+      <module name="JavaCore_FullStack12.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._03_Operator" />
         <item itemvalue="Application._02_Variable" />
         <item itemvalue="Application.Main" />
       </list>
@@ -151,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698585008427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="_02_Variable.java and Common Rules">
+      <option name="closed" value="true" />
+      <created>1698585901982</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698585901982</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,7 +185,8 @@
     <MESSAGE value="Build gradle" />
     <MESSAGE value="_01_WhatIsJava.java" />
     <MESSAGE value="_02_Variable.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="_02_Variable.java" />
+    <MESSAGE value="_02_Variable.java and Common Rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="_02_Variable.java and Common Rules" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
