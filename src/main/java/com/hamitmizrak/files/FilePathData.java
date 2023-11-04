@@ -1,10 +1,10 @@
 package com.hamitmizrak.files;
 
-import java.io.File;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class FilePathData implements IUserFileData,ILogData {
+public class FilePathData implements IUserFileData, ILogData {
 
     // Variable
     private String id;
@@ -18,21 +18,24 @@ public class FilePathData implements IUserFileData,ILogData {
     public FilePathData() {
         this.id = UUID.randomUUID().toString();
         this.systemCreatedDate = new Date(System.currentTimeMillis());
-        this.pathFileName="\\log.txt";
-        this.pathDirectoryName=FilePathUrl.MY_FILE_PATH_URL;
-        this.url=pathDirectoryName.concat(pathFileName);    // C:\io\ecodation\log.txt
-        this.file=new File(url);
+        this.pathFileName = "\\log.txt";
+        this.pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
+        this.url = pathDirectoryName.concat(pathFileName);    // C:\io\ecodation\log.txt
+        this.file = new File(url);
         try {
-            //exists: eğer log.txt adında bir dosya yoksa oluştur
-            if(file.exists()){
+            //!exists: eğer log.txt adında bir dosya yoksa oluştur
+            if (!file.exists()) {
                 file.createNewFile();
-                System.out.println(url+" dosyanız oluşturuldu");
-            }else{
-                System.out.println(url+"Böyle bir dosya mevcut oluşturulmadı !!!");
+                System.out.println(url + " dosyanız oluşturuldu");
+            } else {
+                System.out.println(url + " Böyle bir dosya mevcut oluşturulmadı !!!");
             }
-        }catch (Exception exception){
+        } catch (Exception exception) {
             exception.printStackTrace();
         }
+
+        // 1 yıl sonra dosya kendini silsin
+        // logDateDelete();
     }
 
     // toString
@@ -52,59 +55,102 @@ public class FilePathData implements IUserFileData,ILogData {
     // ----------------------------------------------------
     // localDateTime
     @Override
-    public String logLocalDateTime(){
-        Locale locale=new Locale("tr","TR");
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MMMM/yyy HH:mm:ss",locale);
-        Date date=new Date();
-        String changeToString=simpleDateFormat.format(date).toString();
+    public String logLocalDateTime() {
+        Locale locale = new Locale("tr", "TR");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MMMM/yyy HH:mm:ss", locale);
+        Date date = new Date();
+        String changeToString = simpleDateFormat.format(date).toString();
         return changeToString;
     }
+
     // logFileWriter
     @Override
-    public void logFileWriter(String email, String password){
-    }
+    public void logFileWriter(String email, String password) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(this.url, true))) {
+            String nowDate= logLocalDateTime();
+            String data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
+            bufferedWriter.write(nowDate + "\n");
+            bufferedWriter.write(data + "\n");
+            bufferedWriter.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } //end method logFileWriter
 
     // logFileReader
     @Override
-    public void logFileReader(String email, String password){
-    }
+    public void logFileReader() {
+        String rows; // okunan satır
+        StringBuilder stringBuilder = new StringBuilder();
+        String builderToString;
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(this.url))) {
+            while ((rows = bufferedReader.readLine()) != null) {
+                stringBuilder.append(rows).append("\n");
+            }
+            builderToString = stringBuilder.toString();
+            System.out.println("LOGLAMA: \n" + builderToString);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } //end logFileReader
 
     // log dosyası bir sene sonra silinsin.
     @Override
-    public void logDateDelete(){
-    }
+    public void logDateDelete() {
+        // Bütün dosyalar
+        userFileList();
+        try {
+            File fileDelete = new File(url);
+            // Dosya varsa ?
+            if (fileDelete.exists()) {
+                //Long  nowLong=fileDelete.lastModified();
+                //int currentYearDate=new Date(nowLong).getYear();
+                int currentYearDate=2023;
+                int lastYearDate=2023;
+                if (currentYearDate==lastYearDate)
+                    fileDelete.delete();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Belirtilen zaman aralığında dosyanız silinmedi");
+        }
+    } //end logDateDelete
+
 
     // ----------------------------------------------------
     // userFileCreate
     @Override
-    public String userFileCreate(String fileName){
+    public String userFileCreate(String fileName) {
         return null;
     }
+
     // userFileList
     @Override
-    public List<String> userFileList(){
+    public List<String> userFileList() {
         return null;
     }
 
     // userFileWriter
     @Override
-    public String userFileWriter(String fileName){
+    public String userFileWriter(String fileName) {
         return null;
     }
 
     // userFileReader
     @Override
-    public String userFileReader(String fileName){
+    public String userFileReader(String fileName) {
         return null;
     }
+
     // userFileDelete
     @Override
-    public String userFileCreate(){
+    public String userFileCreate() {
         return null;
     }
+
     // userFileProperties
     @Override
-    public String userFileProperties(){
+    public String userFileProperties() {
         return null;
     }
 
@@ -156,5 +202,11 @@ public class FilePathData implements IUserFileData,ILogData {
 
     public void setSystemCreatedDate(Date systemCreatedDate) {
         this.systemCreatedDate = systemCreatedDate;
+    }
+
+    public static void main(String[] args) {
+        FilePathData filePathData=new FilePathData();
+        File fileDelete = new File(filePathData.url);
+        System.out.println( new Date(fileDelete.lastModified()) );
     }
 } // end File

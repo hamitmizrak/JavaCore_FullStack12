@@ -22,4 +22,4 @@ public interface IUserFileData {
     // userFileProperties
     String userFileProperties();
 
-}
+} //end interface

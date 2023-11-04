@@ -10,9 +10,8 @@ public interface ILogData {
     void logFileWriter(String email, String password);
 
     // logFileReader
-    void logFileReader(String email, String password);
+    void logFileReader();
 
     // log dosyası bir sene sonra silinsin.
     void logDateDelete();
-
-}
+} //end interface
