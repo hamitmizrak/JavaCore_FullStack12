@@ -16,7 +16,9 @@ abstract  public class DatabaseInformation implements Serializable {
     public  DatabaseInformation(){
         // Default MYSQL RDBMS
         this.url="jdbc:mysql://localhost:3306/university".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
+        // yanlıs verirsem: Caused by: java.sql.SQLException: Access denied for user 'root44'@'localhost' (using password: YES)
         this.user="root";
+        // yanlıs verirsem: Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost'   (using password: YES)
         this.password="root";
         this.forNameData="com.mysql.cj.jdbc.Driver";
         // H2DB
