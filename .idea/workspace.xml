@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="DatabaseInformation">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="DatabaseConnection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseInformation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +81,13 @@
       <recent name="com.hamitmizrak.javase" />
     </key>
   </component>
-  <component name="RunManager" selected="Application._10_Method">
-    <configuration name="MainEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase.MainEnum" />
+  <component name="RunManager" selected="Application.DatabaseConnection">
+    <configuration name="DatabaseConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.database.DatabaseConnection" />
       <module name="JavaCore_FullStack12.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hamitmizrak.javase.*" />
+          <option name="PATTERN" value="com.hamitmizrak.database.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,8 +95,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_08_Conditional_Break_Continue_Return_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase._08_Conditional_Break_Continue_Return_2" />
+    <configuration name="MainEnum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hamitmizrak.javase.MainEnum" />
       <module name="JavaCore_FullStack12.main" />
       <extension name="coverage">
         <pattern>
@@ -150,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DatabaseConnection" />
         <item itemvalue="Application._10_Method" />
         <item itemvalue="Application._09_Exception_TryCatch" />
         <item itemvalue="Application.MainEnum" />
         <item itemvalue="Application._09_Loop" />
-        <item itemvalue="Application._08_Conditional_Break_Continue_Return_2" />
       </list>
     </recent_temporary>
   </component>
@@ -311,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699104142220</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="DatabaseConnection">
+      <option name="closed" value="true" />
+      <created>1699104840212</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699104840212</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -330,7 +337,8 @@
     <MESSAGE value="static method" />
     <MESSAGE value="Exception, Enum" />
     <MESSAGE value="DatabaseInformation" />
-    <option name="LAST_COMMIT_MESSAGE" value="DatabaseInformation" />
+    <MESSAGE value="DatabaseConnection" />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseConnection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
