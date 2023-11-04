@@ -1,16 +1,25 @@
 package com.hamitmizrak.files;
 
+import java.util.List;
+
 public interface IUserFileData {
+    // ----------------------------------------------------
+    // userFileCreate
+    String userFileCreate(String fileName);
 
-    // Date Now String
+    // userFileList
+    List<String> userFileList();
 
-    // File Create
+    // userFileWriter
+    String userFileWriter(String fileName);
 
-    // File List
+    // userFileReader
+    String userFileReader(String fileName);
 
-    // File Writer
+    // userFileDelete
+    String userFileCreate();
 
-    // File Reader
+    // userFileProperties
+    String userFileProperties();
 
-    // File Delete
 }

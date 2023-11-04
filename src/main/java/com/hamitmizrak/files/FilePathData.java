@@ -1,8 +1,8 @@
 package com.hamitmizrak.files;
 
 import java.io.File;
-import java.util.Date;
-import java.util.UUID;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class FilePathData implements IUserFileData,ILogData {
 
@@ -51,18 +51,64 @@ public class FilePathData implements IUserFileData,ILogData {
     // METOTLAR
     // ----------------------------------------------------
     // localDateTime
+    @Override
+    public String logLocalDateTime(){
+        Locale locale=new Locale("tr","TR");
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MMMM/yyy HH:mm:ss",locale);
+        Date date=new Date();
+        String changeToString=simpleDateFormat.format(date).toString();
+        return changeToString;
+    }
     // logFileWriter
+    @Override
+    public void logFileWriter(String email, String password){
+    }
+
     // logFileReader
+    @Override
+    public void logFileReader(String email, String password){
+    }
+
     // log dosyası bir sene sonra silinsin.
+    @Override
+    public void logDateDelete(){
+    }
 
     // ----------------------------------------------------
     // userFileCreate
+    @Override
+    public String userFileCreate(String fileName){
+        return null;
+    }
     // userFileList
-    // userFileWriter
-    // userFileReader
-    // userFileDelete
-    // userFileProperties
+    @Override
+    public List<String> userFileList(){
+        return null;
+    }
 
+    // userFileWriter
+    @Override
+    public String userFileWriter(String fileName){
+        return null;
+    }
+
+    // userFileReader
+    @Override
+    public String userFileReader(String fileName){
+        return null;
+    }
+    // userFileDelete
+    @Override
+    public String userFileCreate(){
+        return null;
+    }
+    // userFileProperties
+    @Override
+    public String userFileProperties(){
+        return null;
+    }
+
+    /////////////////////////////////////////////////////////////
     //GETTER AND SETTER
     public String getId() {
         return id;
