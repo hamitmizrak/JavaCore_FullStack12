@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="ILogData , IUserFileData">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="File">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/ILogData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/ILogData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -375,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699111797067</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="File">
+      <option name="closed" value="true" />
+      <created>1699115831422</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699115831422</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -397,7 +404,8 @@
     <MESSAGE value="DatabaseConnection" />
     <MESSAGE value="IDaoGenerics" />
     <MESSAGE value="ILogData , IUserFileData" />
-    <option name="LAST_COMMIT_MESSAGE" value="ILogData , IUserFileData" />
+    <MESSAGE value="File" />
+    <option name="LAST_COMMIT_MESSAGE" value="File" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

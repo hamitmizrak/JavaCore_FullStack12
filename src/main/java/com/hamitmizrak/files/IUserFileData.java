@@ -17,7 +17,7 @@ public interface IUserFileData {
     String userFileReader(String fileName);
 
     // userFileDelete
-    String userFileCreate();
+    String userFileDelete();
 
     // userFileProperties
     String userFileProperties();

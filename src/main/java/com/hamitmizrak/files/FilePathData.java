@@ -116,7 +116,6 @@ public class FilePathData implements IUserFileData, ILogData {
         }
     } //end logDateDelete
 
-
     // ----------------------------------------------------
     // userFileCreate
     @Override
@@ -144,7 +143,7 @@ public class FilePathData implements IUserFileData, ILogData {
 
     // userFileDelete
     @Override
-    public String userFileCreate() {
+    public String userFileDelete() {
         return null;
     }
 
