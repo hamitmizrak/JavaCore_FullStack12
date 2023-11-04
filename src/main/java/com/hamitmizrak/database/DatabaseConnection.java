@@ -3,6 +3,7 @@ package com.hamitmizrak.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+// Class DatabaseConnection
 public class DatabaseConnection extends DatabaseInformation {
 
     // Variable
@@ -20,12 +21,10 @@ public class DatabaseConnection extends DatabaseInformation {
     // Singleton desing pattern (Constructor)
     private DatabaseConnection() {
         try {
-            // Driver
-            Class.forName(this.forNameData);
-            System.out.println("Driver Başarıyla yüklendi");
-            // Database
-            connection = DriverManager.getConnection(url, user, password);
-            System.out.println("Database bağlatısı başarılı");
+            Class.forName(this.forNameData); // Driver
+            //System.out.println("Driver Başarıyla yüklendi");
+            connection = DriverManager.getConnection(url, user, password); // Database
+           // System.out.println("Database bağlatısı başarılı");
         } catch (Exception exception) {
             exception.printStackTrace();
         }
@@ -55,7 +54,7 @@ public class DatabaseConnection extends DatabaseInformation {
 
     // PSVM
     public static void main(String[] args) {
-        DatabaseConnection databaseConnection = new DatabaseConnection();
+        //DatabaseConnection databaseConnection = new DatabaseConnection();
     }
 
 } //end class
