@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="static method">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_10_Static_Final.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/javase/_10_Static_Final.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/exception/BadRequest400Exception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/exception/Created201Exception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/exception/HamitMizrakException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/exception/NotFound404Exception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/roles/ERoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -42,9 +50,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2XRCQf934GzZ067cn7Oqf8fyaBp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,28 +61,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
-    "LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/spring/JavaCore_FullStack12",
-    "onboarding.tips.debug.path": "D:/spring/JavaCore_FullStack12/src/main/java/com/hamitmizrak/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;LombokPluginIS_LOMBOK_JPS_FIX_ENABLED&quot;: &quot;true&quot;,
+    &quot;LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/spring/JavaCore_FullStack12&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/spring/JavaCore_FullStack12/src/main/java/com/hamitmizrak/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\spring\JavaCore_FullStack12" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hamitmizrak.exception" />
       <recent name="com.hamitmizrak.javase" />
     </key>
   </component>
@@ -275,7 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698596680099</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="static method">
+      <option name="closed" value="true" />
+      <created>1698597056382</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698597056382</updated>
+    </task>
+    <task id="LOCAL-00016" summary="static method">
+      <option name="closed" value="true" />
+      <created>1698597114243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698597114243</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
