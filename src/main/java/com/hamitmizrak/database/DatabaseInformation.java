@@ -21,7 +21,10 @@ abstract  public class DatabaseInformation implements Serializable {
         // yanlıs verirsem: Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost'   (using password: YES)
         this.password="root";
         this.forNameData="com.mysql.cj.jdbc.Driver";
+        // POSTGRESQL
+        // url="jdbc:postgresql://localhost:5432/university".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
         // H2DB
+        // url=jdbc:h2:file:./memory_persist/university;useSSL=falseDB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
     }
 
     // Constructor (Parametreli)
