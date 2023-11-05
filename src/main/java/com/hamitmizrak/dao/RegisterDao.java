@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -93,6 +94,29 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
     // SELECT * FROM register where id=1;
     @Override
     public RegisterDto findById(Long id) {
+        RegisterDto registerDto=null;
+        try (Connection connection = getInterfaceConnection()) {
+            String sql = "SELECT * FROM register where id="+id;
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while(resultSet.next()){
+                registerDto=new RegisterDto();
+                registerDto.setId(resultSet.getLong("id"));
+                registerDto.setuNickName(resultSet.getString("nick_name"));
+                registerDto.setuEmailAddress(resultSet.getString("email_address"));
+                registerDto.setuPassword(resultSet.getString("password"));
+                registerDto.setRolles(resultSet.getString("roles"));
+                registerDto.setRemaingNumber(resultSet.getString("remaining_number"));
+                registerDto.setPassive(resultSet.getBoolean("is_passive"));
+                registerDto.setSystemCreatedDate(resultSet.getDate("system_created_date"));
+            }
+            return registerDto;
+
+        }catch (SQLException sql) {
+            sql.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
