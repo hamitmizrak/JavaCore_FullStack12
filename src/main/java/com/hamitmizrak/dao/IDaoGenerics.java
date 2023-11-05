@@ -4,7 +4,7 @@ import com.hamitmizrak.database.DatabaseConnection;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-public interface IDaoGenerics <T> {
+ public interface IDaoGenerics <T> {
 
     public String speedData(Long id);
     public String allDelete();

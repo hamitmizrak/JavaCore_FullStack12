@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="File">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="MVC">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/crypto/ICrypto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/BaseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/IDaoGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/IDaoGenerics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/RegisterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/RegisterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/database/DatabaseInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +48,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "hamitmizrak"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hamitmizrak&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -382,7 +387,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699115831422</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="File">
+      <option name="closed" value="true" />
+      <created>1699115911418</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699115911418</updated>
+    </task>
+    <task id="LOCAL-00027" summary="MVC">
+      <option name="closed" value="true" />
+      <created>1699116024776</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699116024776</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -405,7 +426,8 @@
     <MESSAGE value="IDaoGenerics" />
     <MESSAGE value="ILogData , IUserFileData" />
     <MESSAGE value="File" />
-    <option name="LAST_COMMIT_MESSAGE" value="File" />
+    <MESSAGE value="MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

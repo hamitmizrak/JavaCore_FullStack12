@@ -2,6 +2,7 @@ package com.hamitmizrak.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 // Class DatabaseConnection
 public class DatabaseConnection extends DatabaseInformation {
@@ -25,7 +26,9 @@ public class DatabaseConnection extends DatabaseInformation {
             //System.out.println("Driver Başarıyla yüklendi");
             connection = DriverManager.getConnection(url, user, password); // Database
            // System.out.println("Database bağlatısı başarılı");
-        } catch (Exception exception) {
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }catch (Exception exception) {
             exception.printStackTrace();
         }
     }

@@ -22,9 +22,16 @@ abstract  public class DatabaseInformation implements Serializable {
         this.password="root";
         this.forNameData="com.mysql.cj.jdbc.Driver";
         // POSTGRESQL
+        // this.user="root";
+        // this.password="root";
         // url="jdbc:postgresql://localhost:5432/university".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
+        // this.forNameData="org.postgresql.Driver"
+
         // H2DB
+        // this.user="root";
+        // this.password="root";
         // url=jdbc:h2:file:./memory_persist/university;useSSL=falseDB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+        // this.forNameData="org.h2.Driver"
     }
 
     // Constructor (Parametreli)
