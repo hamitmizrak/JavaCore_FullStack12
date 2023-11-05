@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Controller RegisterDao">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Admin PAge , Register, Login, Logout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/RegisterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dao/RegisterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -432,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699195048666</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Admin PAge , Register, Login, Logout">
+      <option name="closed" value="true" />
+      <created>1699198328664</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699198328664</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -461,7 +467,8 @@
     <MESSAGE value="Create" />
     <MESSAGE value="Find By Id" />
     <MESSAGE value="Controller RegisterDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller RegisterDao" />
+    <MESSAGE value="Admin PAge , Register, Login, Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin PAge , Register, Login, Logout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

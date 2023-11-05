@@ -112,6 +112,5 @@ public class RegisterLoginServices {
     private void adminProcess(RegisterDto registerDto) {
 
     } // end adminProcess
-
-
+    
 } //end class
