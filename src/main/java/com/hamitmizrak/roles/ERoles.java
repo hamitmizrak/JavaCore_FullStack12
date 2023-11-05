@@ -10,7 +10,8 @@ package com.hamitmizrak.roles;
 // 2-a_) Sadece Get metodunu eklemeye yarar
 // 3-a_) Bizi Constructur yazmamıza zorlar
 public enum ERoles {
-    SUPER_ADMIN(1,"super_admin"),ADMIN(2,"admin"),WRITER(3,"writer"),ACCOUNTING(4,"accouting"),USER(5,"user");
+    //SUPER_ADMIN(1,"super_admin"),ADMIN(2,"admin"),WRITER(3,"writer"),ACCOUNTING(4,"accouting"),USER(5,"user");
+   ADMIN(1,"admin"),WRITER(2,"writer"),ACCOUNTING(3,"accouting"),USER(4,"user");
     // Key
     private final Integer key;
 
