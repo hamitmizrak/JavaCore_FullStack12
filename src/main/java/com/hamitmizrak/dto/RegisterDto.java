@@ -13,8 +13,10 @@ public class RegisterDto extends BaseDto implements Serializable {
     private String uPassword;
     private String remaingNumber; // kullanıcının kalan hakkı
     private String rolles;
+    private Boolean isPassive;
 
     // toString
+
     @Override
     public String toString() {
         return "RegisterDto{" +
@@ -24,9 +26,10 @@ public class RegisterDto extends BaseDto implements Serializable {
                 ", uPassword='" + uPassword + '\'' +
                 ", remaingNumber='" + remaingNumber + '\'' +
                 ", rolles='" + rolles + '\'' +
+                ", isPassive=" + isPassive +
                 ", systemCreatedDate=" + systemCreatedDate +
                 "} " + super.toString();
-    } //end toString()
+    }  //end toString()
 
     // GETTER AND SETTER
     public String getuNickName() {
@@ -67,5 +70,13 @@ public class RegisterDto extends BaseDto implements Serializable {
 
     public void setRolles(String rolles) {
         this.rolles = rolles;
+    }
+
+    public Boolean getPassive() {
+        return isPassive;
+    }
+
+    public void setPassive(Boolean passive) {
+        isPassive = passive;
     }
 } //end class

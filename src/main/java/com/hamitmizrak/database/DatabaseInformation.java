@@ -15,7 +15,7 @@ abstract  public class DatabaseInformation implements Serializable {
     // Constructor (Parametresiz)
     public  DatabaseInformation(){
         // Default MYSQL RDBMS
-        this.url="jdbc:mysql://localhost:3306/university".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
+        this.url="jdbc:mysql://localhost:3306/cars".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
         // yanlıs verirsem: Caused by: java.sql.SQLException: Access denied for user 'root44'@'localhost' (using password: YES)
         this.user="root";
         // yanlıs verirsem: Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost'   (using password: YES)
@@ -24,13 +24,13 @@ abstract  public class DatabaseInformation implements Serializable {
         // POSTGRESQL
         // this.user="root";
         // this.password="root";
-        // url="jdbc:postgresql://localhost:5432/university".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
+        // url="jdbc:postgresql://localhost:5432/cars".concat(DatabaseInfoUrl.MYSQL_SPECIAL_URL);
         // this.forNameData="org.postgresql.Driver"
 
         // H2DB
         // this.user="root";
         // this.password="root";
-        // url=jdbc:h2:file:./memory_persist/university;useSSL=falseDB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+        // url=jdbc:h2:file:./memory_persist/cars;useSSL=falseDB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
         // this.forNameData="org.h2.Driver"
     }
 
