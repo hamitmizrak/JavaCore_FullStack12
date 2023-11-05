@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Admin PAge , Register, Login, Logout">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Method RegisterLoginServices">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/roles/ERoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/roles/ERoles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,12 +446,27 @@
       <option name="project" value="LOCAL" />
       <updated>1699198407298</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Method RegisterLoginServices">
+      <option name="closed" value="true" />
+      <created>1699202179035</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1699202179035</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Method RegisterLoginServices">
+      <option name="closed" value="true" />
+      <created>1699202209130</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1699202209130</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Main" />
     <MESSAGE value="Build gradle" />
     <MESSAGE value="_01_WhatIsJava.java" />
     <MESSAGE value="_02_Variable.java" />
@@ -477,7 +491,8 @@
     <MESSAGE value="Find By Id" />
     <MESSAGE value="Controller RegisterDao" />
     <MESSAGE value="Admin PAge , Register, Login, Logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin PAge , Register, Login, Logout" />
+    <MESSAGE value="Method RegisterLoginServices" />
+    <option name="LAST_COMMIT_MESSAGE" value="Method RegisterLoginServices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

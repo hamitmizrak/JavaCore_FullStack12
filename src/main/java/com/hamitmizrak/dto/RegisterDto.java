@@ -16,7 +16,6 @@ public class RegisterDto extends BaseDto implements Serializable {
     private Boolean isPassive;
 
     // toString
-
     @Override
     public String toString() {
         return "RegisterDto{" +
