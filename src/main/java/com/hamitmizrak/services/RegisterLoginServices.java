@@ -5,7 +5,6 @@ import com.hamitmizrak.dao.RegisterDao;
 import com.hamitmizrak.dto.RegisterDto;
 import com.hamitmizrak.files.FilePathData;
 import com.hamitmizrak.roles.ERoles;
-
 import java.util.Scanner;
 
 public class RegisterLoginServices {
