@@ -53,7 +53,7 @@ public class RegisterController implements IDaoGenerics<RegisterDto> {
     }
 
     @Override
-    public RegisterDto updateRemaing(Long id, RegisterDto registerDto) {
+    public RegisterDto updateRemaing(Integer id, RegisterDto registerDto) {
         return registerDao.updateRemaing(id,registerDto);
     }
 

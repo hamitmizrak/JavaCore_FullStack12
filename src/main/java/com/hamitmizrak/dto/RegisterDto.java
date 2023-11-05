@@ -11,7 +11,7 @@ public class RegisterDto extends BaseDto implements Serializable {
     private String uNickName;
     private String uEmailAddress;
     private String uPassword;
-    private String remaingNumber; // kullanıcının kalan hakkı
+    private Long remaingNumber; // kullanıcının kalan hakkı
     private String rolles;
     private Boolean isPassive;
 
@@ -56,11 +56,11 @@ public class RegisterDto extends BaseDto implements Serializable {
         this.uPassword = uPassword;
     }
 
-    public String getRemaingNumber() {
+    public Long getRemaingNumber() {
         return remaingNumber;
     }
 
-    public void setRemaingNumber(String remaingNumber) {
+    public void setRemaingNumber(Long remaingNumber) {
         this.remaingNumber = remaingNumber;
     }
 

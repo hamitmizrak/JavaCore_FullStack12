@@ -129,7 +129,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
             preparedStatement.setString(2, registerDto.getuEmailAddress());
             preparedStatement.setString(3, registerDto.getuPassword());
             preparedStatement.setString(4, registerDto.getRolles());
-            preparedStatement.setString(5, registerDto.getRemaingNumber());
+            preparedStatement.setLong(5, registerDto.getRemaingNumber());
             preparedStatement.setBoolean(6, registerDto.getPassive());
 
             // Manipulation:  executeUpdate() [create,delete,update]
@@ -167,7 +167,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
                 registerDto.setuEmailAddress(resultSet.getString("email_address"));
                 registerDto.setuPassword(resultSet.getString("password"));
                 registerDto.setRolles(resultSet.getString("roles"));
-                registerDto.setRemaingNumber(resultSet.getString("remaining_number"));
+                registerDto.setRemaingNumber(resultSet.getLong("remaining_number"));
                 registerDto.setPassive(resultSet.getBoolean("is_passive"));
                 registerDto.setSystemCreatedDate(resultSet.getDate("system_created_date"));
             }
@@ -197,7 +197,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
                 registerDto.setuEmailAddress(resultSet.getString("email_address"));
                 registerDto.setuPassword(resultSet.getString("password"));
                 registerDto.setRolles(resultSet.getString("roles"));
-                registerDto.setRemaingNumber(resultSet.getString("remaining_number"));
+                registerDto.setRemaingNumber(resultSet.getLong("remaining_number"));
                 registerDto.setPassive(resultSet.getBoolean("is_passive"));
                 registerDto.setSystemCreatedDate(resultSet.getDate("system_created_date"));
             }
@@ -228,7 +228,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
                 registerDto.setuEmailAddress(resultSet.getString("email_address"));
                 registerDto.setuPassword(resultSet.getString("password"));
                 registerDto.setRolles(resultSet.getString("roles"));
-                registerDto.setRemaingNumber(resultSet.getString("remaining_number"));
+                registerDto.setRemaingNumber(resultSet.getLong("remaining_number"));
                 registerDto.setPassive(resultSet.getBoolean("is_passive"));
                 registerDto.setSystemCreatedDate(resultSet.getDate("system_created_date"));
                 list.add(registerDto);
@@ -261,7 +261,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
                 preparedStatement.setString(2, registerDto.getuEmailAddress());
                 preparedStatement.setString(3, registerDto.getuPassword());
                 preparedStatement.setString(4, registerDto.getRolles());
-                preparedStatement.setString(5, registerDto.getRemaingNumber());
+                preparedStatement.setLong(5, registerDto.getRemaingNumber());
                 preparedStatement.setBoolean(6, registerDto.getPassive());
                 preparedStatement.setLong(7, registerDto.getId());
 
@@ -299,7 +299,7 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
                 connection.setAutoCommit(false);
                 String sql = "UPDATE register SET `remaining_number`=?, WHERE id = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setString(1, registerDto.getRemaingNumber());
+                preparedStatement.setLong(1, registerDto.getRemaingNumber());
                 preparedStatement.setLong(2, registerDto.getId());
 
                 // Manipulation:  executeUpdate() [create,delete,update]
