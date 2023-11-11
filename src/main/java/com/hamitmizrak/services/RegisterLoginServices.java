@@ -176,30 +176,71 @@ public class RegisterLoginServices {
                     break;
             }
         } //end while
-
     } // end adminProcess
 
     ////////////////////////////////////////////////////////////////////////
+    // METHOD
+    // just member login
     private void specialHomePage() {
+        System.out.println("Sadece Üye olmuş kişiler bu sayfayı görebilir");
     }
 
+    // CRUD
+    // USER LIST
     private void memberList() {
+        registerController.list().forEach(System.out::println);
     }
 
+    // CREATE
     private RegisterDto memberCreate() {
-        return null;
+        return register();
     }
 
+    // USER FIND ID
     private RegisterDto memberFindById() {
-        return null;
+        System.out.println("Lütfen Bulmak istediğiniz Kullanıcı ID'sini yazınız");
+        return registerController.findById(new Scanner(System.in).nextLong());
     }
 
+    // USER FIND EMAIL
     private RegisterDto memberFindEmail() {
-        return null;
+        System.out.println("Lütfen Bulmak istediğiniz Kullanıcı email adresini yazınız");
+        return registerController.findByEmail(new Scanner(System.in).nextLine());
     }
 
+    // UPDATE
     private RegisterDto memberUpdate() {
-        return null;
+        Scanner klavye=new Scanner(System.in);
+        RegisterDto registerDto=new RegisterDto();
+        String uNickName,uEmailAddress, uPassword, uRolles;
+        Long remaingNumber,id;
+        Boolean isPassive;
+        System.out.println("Güncellemek istediğiniz ID giriniz");
+        id=klavye.nextLong();
+        // NOT: Scannerda tam sayılardan sonra eğer String geliyorsa bir alt satıra geçmek için
+        // mutlaka klavye.nextLine() yazmak zorundasınız.
+        klavye.nextLine();
+
+        System.out.println("Güncellemek istediğiniz takma adını giriniz");
+        uNickName=klavye.nextLine();
+        System.out.println("Güncellemek istediğiniz email adresiniz giriniz");
+        uEmailAddress=klavye.nextLine();
+        System.out.println("Güncellemek istediğiniz şifreyi giriniz");
+        uPassword=klavye.nextLine();
+        System.out.println("Güncellemek istediğiniz kalan hak sayısını giriniz");
+        remaingNumber=klavye.nextLong();
+        System.out.println("Güncellemek istediğiniz kullanıcı rol bilgisiniz yapınız.");
+        uRolles=klavye.nextLine();
+        System.out.println("Güncellemek istediğiniz kullanıcı aktif/pasif yapınız.");
+        isPassive=klavye.nextBoolean();
+        ////////////////////////////////
+        registerDto.setId(id);
+        registerDto.setuNickName(uNickName);
+        registerDto.setuEmailAddress(uEmailAddress);
+        registerDto.setuPassword(uPassword);
+        registerDto.setRemaingNumber(remaingNumber);
+        registerDto.setPassive(isPassive);
+        return registerController.update(id,registerDto);
     }
 
     private RegisterDto memberDelete() {

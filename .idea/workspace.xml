@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Method RegisterLoginServices">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Revize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/dto/RegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -462,12 +461,19 @@
       <option name="project" value="LOCAL" />
       <updated>1699202209130</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Revize">
+      <option name="closed" value="true" />
+      <created>1699209098505</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1699209098505</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Build gradle" />
     <MESSAGE value="_01_WhatIsJava.java" />
     <MESSAGE value="_02_Variable.java" />
     <MESSAGE value="_02_Variable.java and Common Rules" />
@@ -492,7 +498,8 @@
     <MESSAGE value="Controller RegisterDao" />
     <MESSAGE value="Admin PAge , Register, Login, Logout" />
     <MESSAGE value="Method RegisterLoginServices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Method RegisterLoginServices" />
+    <MESSAGE value="Revize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revize" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
