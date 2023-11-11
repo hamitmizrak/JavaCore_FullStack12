@@ -67,7 +67,7 @@ public class FilePathData implements IUserFileData, ILogData {
     @Override
     public void logFileWriter(String email, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(this.url, true))) {
-            String nowDate= logLocalDateTime();
+            String nowDate = logLocalDateTime();
             String data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
             bufferedWriter.write(nowDate + "\n");
             bufferedWriter.write(data + "\n");
@@ -105,9 +105,9 @@ public class FilePathData implements IUserFileData, ILogData {
             if (fileDelete.exists()) {
                 //Long  nowLong=fileDelete.lastModified();
                 //int currentYearDate=new Date(nowLong).getYear();
-                int currentYearDate=2023;
-                int lastYearDate=2023;
-                if (currentYearDate==lastYearDate)
+                int currentYearDate = 2023;
+                int lastYearDate = 2023;
+                if (currentYearDate == lastYearDate)
                     fileDelete.delete();
             }
         } catch (Exception e) {
@@ -121,51 +121,53 @@ public class FilePathData implements IUserFileData, ILogData {
     // Dosya ekle admin(+) writer(+)
     @Override
     public String userFileCreate(String fileName) {
-        this.id=UUID.randomUUID().toString();
-        this.systemCreatedDate=new Date(System.currentTimeMillis());
-        pathFileName="\\"+fileName.concat(".txt");
-        pathDirectoryName=FilePathUrl.MY_FILE_PATH_URL;
-        url=pathDirectoryName.concat(pathFileName);
-        this.file=new File(url);
+        this.id = UUID.randomUUID().toString();
+        this.systemCreatedDate = new Date(System.currentTimeMillis());
+        pathFileName = "\\" + fileName.concat(".txt");
+        pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
+        url = pathDirectoryName.concat(pathFileName);
+        this.file = new File(url);
 
         try {
-        // Böyle bir dosya var mı ?
-        if(file.createNewFile()){
-            System.out.println(pathFileName+" Böyle bir dosya yoktur ve oluşturuldu");
-        }else{
-            String fileNameData=pathFileName+" zaten böyle bir dosya var tekrardan oluşturulmadı";
-            System.out.println(fileNameData);
-            return fileNameData;
-        }
-        }catch (Exception e){
+            // Böyle bir dosya var mı ?
+            if (file.createNewFile()) {
+                System.out.println(pathFileName + " Böyle bir dosya yoktur ve oluşturuldu");
+            } else {
+                String fileNameData = pathFileName + " zaten böyle bir dosya var tekrardan oluşturulmadı";
+                System.out.println(fileNameData);
+                return fileNameData;
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return url+" oluşturuldu";
+        return url + " oluşturuldu";
     }
 
     // userFileList
     // Dosya Listele admin(+) writer(+)
     @Override
     public List<String> userFileList() {
-        List<String> list=new ArrayList<>();
-        File fileList=new File(FilePathUrl.MY_FILE_PATH_URL);
+        List<String> list = new ArrayList<>();
+        File fileList = new File(FilePathUrl.MY_FILE_PATH_URL);
         System.out.println(fileList.getPath());
         System.out.println(fileList.getParent());
-        for( File temp: fileList.listFiles()){
+        for (File temp : fileList.listFiles()) {
             System.out.println(temp.getName());
             list.add(temp.getName());
         }
         return list;
     }
 
-    // userFileWriter
-    //
+    // her kullanıcının kendisine ait dosya olsun
+    // userFileWriter (Sadece o kullanıcının bilgileri yazdır.
     @Override
     public String userFileWriter(String fileName) {
         return null;
     }
 
     // userFileReader
+    // her kullanıcının kendisine ait dosya olsun
+    // userFileWriter (Sadece o kullanıcının bilgileri okusun.
     @Override
     public String userFileReader(String fileName) {
         return null;
@@ -175,7 +177,33 @@ public class FilePathData implements IUserFileData, ILogData {
     // Dosya Silme admin(+)
     @Override
     public String userFileDelete() {
-        return null;
+        Scanner klavye = new Scanner(System.in);
+        userFileList(); //dosyaları listelemek
+        System.out.println("Silmek istediğiniz dosya adını giriniz");
+        String fileName = klavye.nextLine().concat(".txt");
+        pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
+        url = pathDirectoryName.concat("\\").concat(fileName);
+        System.out.println("Dosya uzantısı: " + url);
+
+        // Kullanıcıdan onay almak
+        char chooise;
+        System.out.println(fileName + " bu dosyayı silmek istiyor musunuz ? E / H");
+        chooise = klavye.nextLine().charAt(0);
+        if (chooise == 'E' || chooise == 'e') {
+            try {
+                File fileDelete = new File(url);
+                // exist: böyle bir doya var mı? yok mu?
+                if (fileDelete.exists()) {
+                    fileDelete.delete();
+                    System.out.println(fileName + " adlı dosyanız silindi");
+                }
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        } else {
+            System.out.println("Dosyanız silinmedi");
+        }
+        return fileName;
     }
 
     // userFileProperties
@@ -236,8 +264,8 @@ public class FilePathData implements IUserFileData, ILogData {
     }
 
     public static void main(String[] args) {
-        FilePathData filePathData=new FilePathData();
+        FilePathData filePathData = new FilePathData();
         File fileDelete = new File(filePathData.url);
-        System.out.println( new Date(fileDelete.lastModified()) );
+        System.out.println(new Date(fileDelete.lastModified()));
     }
 } // end File
