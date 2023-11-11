@@ -6,24 +6,24 @@ import java.util.List;
 public interface IUserFileData {
 
     // Find File
-    File fileFind(String fileName);
+    File specialFileFind(String fileName);
 
     // userFileCreate
-    String userFileCreate(String fileName);
+    String specialUserFileCreate(String fileName);
 
     // userFileList
-    List<String> userFileList();
+    List<String> specialUserFileList();
 
     // userFileWriter
-    String userFileWriter(String fileName,String email, String password);
+    String specialUserFileWriter(String fileName, String email, String password);
 
     // userFileReader
-    String userFileReader(String fileName);
+    String specialUserFileReader(String fileName);
 
     // userFileDelete
-    String userFileDelete(String fileName);
+    String specialUserFileDelete(String fileName);
 
     // userFileProperties
-    String userFileProperties(String fileName);
+    String specialUserFileProperties(String fileName);
 
 } //end interface

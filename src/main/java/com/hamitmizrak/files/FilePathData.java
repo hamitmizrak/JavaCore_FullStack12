@@ -98,7 +98,7 @@ public class FilePathData implements IUserFileData, ILogData {
     @Override
     public void logDateDelete() {
         // Bütün dosyalar
-        userFileList();
+        specialUserFileList();
         try {
             File fileDelete = new File(url);
             // Dosya varsa ?
@@ -120,7 +120,7 @@ public class FilePathData implements IUserFileData, ILogData {
 
     // Special File Find
     @Override
-    public File fileFind(String fileName) {
+    public File specialFileFind(String fileName) {
         File fileList = new File(FilePathUrl.MY_FILE_PATH_URL);
         String fileName2 = fileName.concat(".txt");
         for (File temp : fileList.listFiles()) {
@@ -137,7 +137,7 @@ public class FilePathData implements IUserFileData, ILogData {
     // Special userFileCreate
     // Dosya ekle admin(+) writer(+)
     @Override
-    public String userFileCreate(String fileName) {
+    public String specialUserFileCreate(String fileName) {
         this.id = UUID.randomUUID().toString();
         this.systemCreatedDate = new Date(System.currentTimeMillis());
         pathFileName = "\\" + fileName.concat(".txt");
@@ -162,7 +162,7 @@ public class FilePathData implements IUserFileData, ILogData {
     // Special userFileList
     // Dosya Listele admin(+) writer(+)
     @Override
-    public List<String> userFileList() {
+    public List<String> specialUserFileList() {
         List<String> list = new ArrayList<>();
         File fileList = new File(FilePathUrl.MY_FILE_PATH_URL);
         System.out.println(fileList.getPath());
@@ -177,14 +177,14 @@ public class FilePathData implements IUserFileData, ILogData {
     // Special her kullanıcının kendisine ait dosya olsun
     // userFileWriter (Sadece o kullanıcının bilgileri yazdır.
     @Override
-    public String userFileWriter(String fileName, String email, String password) {
+    public String specialUserFileWriter(String fileName, String email, String password) {
         // find
-        File findData=  fileFind(fileName);
+        File findData=  specialFileFind(fileName);
         String data="";
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(findData.getPath(), true))) {
             String nowDate = logLocalDateTime();
              data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
-            bufferedWriter.write(nowDate + "\n");
+            //bufferedWriter.write(nowDate + "\n");
             bufferedWriter.write(data + "\n");
             bufferedWriter.flush();
         } catch (Exception e) {
@@ -197,9 +197,9 @@ public class FilePathData implements IUserFileData, ILogData {
     // her kullanıcının kendisine ait dosya olsun
     // userFileWriter (Sadece o kullanıcının bilgileri okusun.
     @Override
-    public String userFileReader(String fileName) {
+    public String specialUserFileReader(String fileName) {
         // find
-        File findData=  fileFind(fileName);
+        File findData=  specialFileFind(fileName);
 
         String rows; // okunan satır
         StringBuilder stringBuilder = new StringBuilder();
@@ -222,10 +222,10 @@ public class FilePathData implements IUserFileData, ILogData {
     // Special userFileDelete
     // Dosya Silme admin(+)
     @Override
-    public String userFileDelete(String fileName) {
+    public String specialUserFileDelete(String fileName) {
         Scanner klavye = new Scanner(System.in);
-        userFileList(); //dosyaları listelemek
-        File findData=  fileFind(fileName);
+        specialUserFileList(); //dosyaları listelemek
+        File findData=  specialFileFind(fileName);
         //System.out.println("Silmek istediğiniz dosya adını giriniz");
         //String fileName = klavye.nextLine().concat(".txt");
         pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
@@ -256,9 +256,25 @@ public class FilePathData implements IUserFileData, ILogData {
     // Special userFileProperties
     // Dosya Bilgileri admin(+) writer(+)
     @Override
-    public String userFileProperties(String fileName) {
-        File findData=  fileFind(fileName);
-        return null;
+    public String specialUserFileProperties(String fileName) {
+        File findData=  specialFileFind(fileName);
+        System.out.println("LENGHT: "+findData.length());
+        System.out.println("-----");
+        System.out.println("PATH: "+findData.getPath());
+        System.out.println("PARENT: "+findData.getParent());
+        System.out.println("-----");
+        System.out.println("EXECUTE: "+findData.canExecute());
+        System.out.println("READ: "+findData.canRead());
+        System.out.println("WRITE: "+findData.canWrite());
+        System.out.println("-----");
+        System.out.println("IS DIRECTORY : "+findData.isDirectory());
+        System.out.println("IS FILE : "+findData.isFile());
+        System.out.println("IS HIDDEN : "+findData.isHidden());
+        System.out.println("-----");
+        System.out.println("TOTAL SPACE: "+findData.getTotalSpace());
+        System.out.println("FREE SPACE: "+findData.getFreeSpace());
+
+        return findData.getPath();
     }
 
     /////////////////////////////////////////////////////////////
@@ -316,8 +332,10 @@ public class FilePathData implements IUserFileData, ILogData {
         // File fileDelete = new File(filePathData.url);
         // System.out.println(new Date(fileDelete.lastModified()));
         //filePathData.fileFind("deneme");
-        filePathData.userFileCreate("Hamit");
-        filePathData.userFileReader("Hamit");
-        filePathData.userFileWriter("Hamit", "data44@gmail.com","şifre66");
+        filePathData.specialUserFileCreate("Hamit");
+        filePathData.specialUserFileReader("Hamit");
+        filePathData.specialUserFileWriter("Hamit", "data44@gmail.com","şifre66");
+        //filePathData.userFileDelete("Hamit");
+        filePathData.specialUserFileProperties("Hamit");
     }
 } // end File
