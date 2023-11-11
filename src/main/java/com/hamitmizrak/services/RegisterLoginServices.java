@@ -150,7 +150,7 @@ public class RegisterLoginServices {
                     break;
                 case 8:
                     System.out.println("Hatalı Giriş Logları admin(+) writer(+) user(+)");
-                    failedLogin();
+                    logFailedLogin();
                     break;
                 case 9:
                     System.out.println("Üye Rolunüz admin(+) writer(+) user(+)");
@@ -178,7 +178,7 @@ public class RegisterLoginServices {
         } //end while
     } // end adminProcess
 
-    ////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////
     // METHOD
     // just member login
     private void specialHomePage() {
@@ -243,22 +243,36 @@ public class RegisterLoginServices {
         return registerController.update(id,registerDto);
     }
 
+    // DELETE
     private RegisterDto memberDelete() {
-        return null;
+        Scanner klavye=new Scanner(System.in);
+        RegisterDto registerDto=new RegisterDto();
+        Long id;
+        System.out.println("Silmek istediğiniz ID giriniz");
+        id=klavye.nextLong();
+        registerDto.setId(id);
+        return registerController.deleteById(registerDto);
     }
 
-    private void failedLogin() {
+    //////////////////////////////////////////////////////////////////////////////////////
+    // FILE PROCESS
+    // Kullanıcının girdiği yanlış denemeleri
+    private void logFailedLogin() {
     }
 
+    // FILE CREATE
     private void specialFileCreate() {
     }
 
+    // FILE LIST
     private void specialFileList() {
     }
 
+    // FILE DELETE
     private void specialFileDelete() {
     }
 
+    // FILE INFORMATION
     private void specialFileInformation() {
     }
 
