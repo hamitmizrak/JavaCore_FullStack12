@@ -1,9 +1,13 @@
 package com.hamitmizrak.files;
 
+import java.io.File;
 import java.util.List;
 
 public interface IUserFileData {
-    // ----------------------------------------------------
+
+    // Find File
+    File fileFind(String fileName);
+
     // userFileCreate
     String userFileCreate(String fileName);
 
@@ -11,7 +15,7 @@ public interface IUserFileData {
     List<String> userFileList();
 
     // userFileWriter
-    String userFileWriter(String fileName);
+    String userFileWriter(String fileName,String email, String password);
 
     // userFileReader
     String userFileReader(String fileName);

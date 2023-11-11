@@ -26,7 +26,7 @@ public class RegisterLoginServices {
         uNickName = klavye.nextLine();
         System.out.println("Email adresinizi giriniz");
         uEmailAddress = klavye.nextLine();
-        System.out.println("Şifrenizi giriniz");
+        System.out.println("Sifrenizi giriniz");
         uPassword = klavye.nextLine();
         rolles = ERoles.USER.getValue().toString(); // defaultta: roller
         remaingNumber = 5L;
@@ -52,7 +52,7 @@ public class RegisterLoginServices {
         System.out.println("\nLOGIN SAYFASI");
         System.out.println("Emaili giriniz");
         uEmailAddress = klavye.nextLine();
-        System.out.println("Şifreyi giriniz");
+        System.out.println("Sifreyi giriniz");
         uPassword = klavye.nextLine();
 
         // Email Find
@@ -82,7 +82,7 @@ public class RegisterLoginServices {
                     remainingNumber--;
                     registerEmailFindDto.setRemaingNumber(remainingNumber);
                     System.out.println("Kalan Hakkınız: " + registerEmailFindDto.getRemaingNumber());
-                    System.out.println("Şifreyi veya Emaili yanlış girdiniz");
+                    System.out.println("Sifreyi veya Emaili yanlış girdiniz");
                     registerController.updateRemaing(remainingNumber, registerEmailFindDto);
                     // File
                     filePathData.logFileWriter(uEmailAddress, uPassword);
@@ -111,7 +111,7 @@ public class RegisterLoginServices {
     private void adminProcess(RegisterDto registerDto) {
         while(true){
             Scanner klavye=new Scanner(System.in);
-            System.out.println("\nADMIN SAYFASINA HOŞGELDINIZ");
+            System.out.println("\nADMIN SAYFASINA HOSGELDINIZ");
             System.out.println("Lütfen Seçiminizi yapınız");
             System.out.println("1-) Anasayfa\n2-) Kayıtlı Üyeleri Listele\n3-) Üye Ekle");
             System.out.println("4-) Kayıtlı Üye ID bul \n5-)Kayıtlı Üye Email bul\n6-) Kayıtlı Üye Güncelle ");

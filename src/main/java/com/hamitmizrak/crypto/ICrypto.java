@@ -2,7 +2,7 @@ package com.hamitmizrak.crypto;
 
 abstract public interface ICrypto {
 
-    // // Generate (Şifreyi Kripto)
+    // // Generate (Sifreyi Kripto)
     public String generateBCryptoPasswordEncoder(String currentPassword);
 
     // Match

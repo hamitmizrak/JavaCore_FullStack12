@@ -28,7 +28,7 @@ public class FilePathData implements IUserFileData, ILogData {
                 file.createNewFile();
                 System.out.println(url + " dosyanız oluşturuldu");
             } else {
-                System.out.println(url + " Böyle bir dosya mevcut oluşturulmadı !!!");
+                System.out.println(url + " zaten böyle bir dosya var tekrardan oluşturulmadı!!!");
             }
         } catch (Exception exception) {
             exception.printStackTrace();
@@ -117,7 +117,24 @@ public class FilePathData implements IUserFileData, ILogData {
     } //end logDateDelete
 
     // ----------------------------------------------------
-    // userFileCreate
+
+    // Special File Find
+    @Override
+    public File fileFind(String fileName) {
+        File fileList = new File(FilePathUrl.MY_FILE_PATH_URL);
+        String fileName2 = fileName.concat(".txt");
+        for (File temp : fileList.listFiles()) {
+            if (temp.getName().toString().equals(fileName2)) {
+                File fileFind = new File(temp.toString());
+                System.out.println(fileFind);
+                return temp;
+            }
+        }
+        return null;
+    }
+
+
+    // Special userFileCreate
     // Dosya ekle admin(+) writer(+)
     @Override
     public String userFileCreate(String fileName) {
@@ -127,7 +144,6 @@ public class FilePathData implements IUserFileData, ILogData {
         pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
         url = pathDirectoryName.concat(pathFileName);
         this.file = new File(url);
-
         try {
             // Böyle bir dosya var mı ?
             if (file.createNewFile()) {
@@ -143,7 +159,7 @@ public class FilePathData implements IUserFileData, ILogData {
         return url + " oluşturuldu";
     }
 
-    // userFileList
+    // Special userFileList
     // Dosya Listele admin(+) writer(+)
     @Override
     public List<String> userFileList() {
@@ -158,29 +174,59 @@ public class FilePathData implements IUserFileData, ILogData {
         return list;
     }
 
-    // her kullanıcının kendisine ait dosya olsun
+    // Special her kullanıcının kendisine ait dosya olsun
     // userFileWriter (Sadece o kullanıcının bilgileri yazdır.
     @Override
-    public String userFileWriter(String fileName) {
-        return null;
+    public String userFileWriter(String fileName, String email, String password) {
+        // find
+        File findData=  fileFind(fileName);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(findData.getPath(), true))) {
+            String nowDate = logLocalDateTime();
+            String data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
+            bufferedWriter.write(nowDate + "\n");
+            bufferedWriter.write(data + "\n");
+            bufferedWriter.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return data;
     }
 
-    // userFileReader
+    // Special userFileReader
     // her kullanıcının kendisine ait dosya olsun
     // userFileWriter (Sadece o kullanıcının bilgileri okusun.
     @Override
     public String userFileReader(String fileName) {
-        return null;
+        // find
+        File findData=  fileFind(fileName);
+
+        String rows; // okunan satır
+        StringBuilder stringBuilder = new StringBuilder();
+        String builderToString = null;
+        pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
+        pathFileName = "\\" + fileName.concat(".txt");
+        String url = pathDirectoryName.concat(pathFileName);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(findData.getPath()))) {
+            while ((rows = bufferedReader.readLine()) != null) {
+                stringBuilder.append(rows).append("\n");
+            }
+            builderToString = stringBuilder.toString();
+            System.out.println("LOGLAMA: \n" + builderToString);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return builderToString;
     }
 
-    // userFileDelete
+    // Special userFileDelete
     // Dosya Silme admin(+)
     @Override
     public String userFileDelete(String fileName) {
         Scanner klavye = new Scanner(System.in);
         userFileList(); //dosyaları listelemek
-        System.out.println("Silmek istediğiniz dosya adını giriniz");
-        String fileName = klavye.nextLine().concat(".txt");
+        File findData=  fileFind(fileName);
+        //System.out.println("Silmek istediğiniz dosya adını giriniz");
+        //String fileName = klavye.nextLine().concat(".txt");
         pathDirectoryName = FilePathUrl.MY_FILE_PATH_URL;
         url = pathDirectoryName.concat("\\").concat(fileName);
         System.out.println("Dosya uzantısı: " + url);
@@ -191,7 +237,7 @@ public class FilePathData implements IUserFileData, ILogData {
         chooise = klavye.nextLine().charAt(0);
         if (chooise == 'E' || chooise == 'e') {
             try {
-                File fileDelete = new File(url);
+                File fileDelete = new File(findData.getPath());
                 // exist: böyle bir doya var mı? yok mu?
                 if (fileDelete.exists()) {
                     fileDelete.delete();
@@ -206,10 +252,11 @@ public class FilePathData implements IUserFileData, ILogData {
         return fileName;
     }
 
-    // userFileProperties
+    // Special userFileProperties
     // Dosya Bilgileri admin(+) writer(+)
     @Override
     public String userFileProperties(String fileName) {
+        File findData=  fileFind(fileName);
         return null;
     }
 
@@ -265,7 +312,8 @@ public class FilePathData implements IUserFileData, ILogData {
 
     public static void main(String[] args) {
         FilePathData filePathData = new FilePathData();
-        File fileDelete = new File(filePathData.url);
-        System.out.println(new Date(fileDelete.lastModified()));
+        // File fileDelete = new File(filePathData.url);
+        // System.out.println(new Date(fileDelete.lastModified()));
+        filePathData.fileFind("deneme");
     }
 } // end File
