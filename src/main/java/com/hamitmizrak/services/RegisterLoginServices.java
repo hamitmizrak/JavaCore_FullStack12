@@ -154,6 +154,7 @@ public class RegisterLoginServices {
                     break;
                 case 9:
                     System.out.println("Üye Rolunüz admin(+) writer(+) user(+)");
+                    String rolles=userRoles(registerDto.getRolles());
                     break;
                 case 10:
                     System.out.println("Dosya ekle admin(+) writer(+) ");
@@ -164,11 +165,11 @@ public class RegisterLoginServices {
                     specialFileList();
                     break;
                 case 12:
-                    System.out.println("Dosya Listele admin(+) ");
+                    System.out.println("Dosya Silme admin(+) ");
                     specialFileDelete();
                     break;
                 case 13:
-                    System.out.println("Dosya Listele admin(+) writer(+) ");
+                    System.out.println("Dosya Bilgileri admin(+) writer(+) ");
                     specialFileInformation();
                     break;
                 case 14:
@@ -177,6 +178,13 @@ public class RegisterLoginServices {
             }
         } //end while
     } // end adminProcess
+
+
+    /////
+    // ROLLES
+    private String userRoles(String rolles) {
+        return rolles;
+    }
 
     //////////////////////////////////////////////////////////////////////////////////////
     // METHOD

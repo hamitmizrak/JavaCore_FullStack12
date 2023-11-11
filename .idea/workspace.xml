@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Update, Register,">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" afterDir="false" />
     </list>
@@ -477,12 +477,19 @@
       <option name="project" value="LOCAL" />
       <updated>1699706274721</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="delete">
+      <option name="closed" value="true" />
+      <created>1699707157428</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1699707157428</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="_02_Variable.java" />
     <MESSAGE value="_02_Variable.java and Common Rules" />
     <MESSAGE value="_03_Operator" />
     <MESSAGE value="_04_Scanner_JOptionalPane_Escape_System.java" />
@@ -507,7 +514,8 @@
     <MESSAGE value="Method RegisterLoginServices" />
     <MESSAGE value="Revize" />
     <MESSAGE value="Update, Register," />
-    <option name="LAST_COMMIT_MESSAGE" value="Update, Register," />
+    <MESSAGE value="delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
