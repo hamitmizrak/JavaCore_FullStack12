@@ -266,6 +266,7 @@ public class RegisterLoginServices {
     // FILE PROCESS
     // Kullanıcının girdiği yanlış denemeleri
     private void logFailedLogin() {
+        filePathData.logFileReader();
     }
 
     // FILE CREATE

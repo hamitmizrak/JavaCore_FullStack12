@@ -118,18 +118,48 @@ public class FilePathData implements IUserFileData, ILogData {
 
     // ----------------------------------------------------
     // userFileCreate
+    // Dosya ekle admin(+) writer(+)
     @Override
     public String userFileCreate(String fileName) {
-        return null;
+        this.id=UUID.randomUUID().toString();
+        this.systemCreatedDate=new Date(System.currentTimeMillis());
+        pathFileName="\\"+fileName.concat(".txt");
+        pathDirectoryName=FilePathUrl.MY_FILE_PATH_URL;
+        url=pathDirectoryName.concat(pathFileName);
+        this.file=new File(url);
+
+        try {
+        // Böyle bir dosya var mı ?
+        if(file.createNewFile()){
+            System.out.println(pathFileName+" Böyle bir dosya yoktur ve oluşturuldu");
+        }else{
+            String fileNameData=pathFileName+" zaten böyle bir dosya var tekrardan oluşturulmadı";
+            System.out.println(fileNameData);
+            return fileNameData;
+        }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return url+" oluşturuldu";
     }
 
     // userFileList
+    // Dosya Listele admin(+) writer(+)
     @Override
     public List<String> userFileList() {
-        return null;
+        List<String> list=new ArrayList<>();
+        File fileList=new File(FilePathUrl.MY_FILE_PATH_URL);
+        System.out.println(fileList.getPath());
+        System.out.println(fileList.getParent());
+        for( File temp: fileList.listFiles()){
+            System.out.println(temp.getName());
+            list.add(temp.getName());
+        }
+        return list;
     }
 
     // userFileWriter
+    //
     @Override
     public String userFileWriter(String fileName) {
         return null;
@@ -142,12 +172,14 @@ public class FilePathData implements IUserFileData, ILogData {
     }
 
     // userFileDelete
+    // Dosya Silme admin(+)
     @Override
     public String userFileDelete() {
         return null;
     }
 
     // userFileProperties
+    // Dosya Bilgileri admin(+) writer(+)
     @Override
     public String userFileProperties() {
         return null;
