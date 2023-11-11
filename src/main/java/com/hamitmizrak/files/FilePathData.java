@@ -176,7 +176,7 @@ public class FilePathData implements IUserFileData, ILogData {
     // userFileDelete
     // Dosya Silme admin(+)
     @Override
-    public String userFileDelete() {
+    public String userFileDelete(String fileName) {
         Scanner klavye = new Scanner(System.in);
         userFileList(); //dosyaları listelemek
         System.out.println("Silmek istediğiniz dosya adını giriniz");
@@ -209,7 +209,7 @@ public class FilePathData implements IUserFileData, ILogData {
     // userFileProperties
     // Dosya Bilgileri admin(+) writer(+)
     @Override
-    public String userFileProperties() {
+    public String userFileProperties(String fileName) {
         return null;
     }
 

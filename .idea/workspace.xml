@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="userFileList">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="userFileDelete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -501,12 +502,19 @@
       <option name="project" value="LOCAL" />
       <updated>1699708384196</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="userFileDelete">
+      <option name="closed" value="true" />
+      <created>1699709383628</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1699709383628</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="_04_Scanner_JOptionalPane_Escape_System.java" />
     <MESSAGE value="String," />
     <MESSAGE value="Conditional" />
     <MESSAGE value="revize" />
@@ -531,7 +539,8 @@
     <MESSAGE value="delete" />
     <MESSAGE value="rolles" />
     <MESSAGE value="userFileList" />
-    <option name="LAST_COMMIT_MESSAGE" value="userFileList" />
+    <MESSAGE value="userFileDelete" />
+    <option name="LAST_COMMIT_MESSAGE" value="userFileDelete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
