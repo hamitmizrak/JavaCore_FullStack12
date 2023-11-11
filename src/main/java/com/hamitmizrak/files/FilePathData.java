@@ -133,7 +133,6 @@ public class FilePathData implements IUserFileData, ILogData {
         return null;
     }
 
-
     // Special userFileCreate
     // Dosya ekle admin(+) writer(+)
     @Override
@@ -273,7 +272,6 @@ public class FilePathData implements IUserFileData, ILogData {
         System.out.println("-----");
         System.out.println("TOTAL SPACE: "+findData.getTotalSpace());
         System.out.println("FREE SPACE: "+findData.getFreeSpace());
-
         return findData.getPath();
     }
 
@@ -328,14 +326,14 @@ public class FilePathData implements IUserFileData, ILogData {
     }
 
     public static void main(String[] args) {
-        FilePathData filePathData = new FilePathData();
+        //FilePathData filePathData = new FilePathData();
         // File fileDelete = new File(filePathData.url);
         // System.out.println(new Date(fileDelete.lastModified()));
         //filePathData.fileFind("deneme");
-        filePathData.specialUserFileCreate("Hamit");
-        filePathData.specialUserFileReader("Hamit");
-        filePathData.specialUserFileWriter("Hamit", "data44@gmail.com","şifre66");
+        //filePathData.specialUserFileCreate("Hamit");
+        //filePathData.specialUserFileReader("Hamit");
+        //filePathData.specialUserFileWriter("Hamit", "data44@gmail.com","şifre66");
         //filePathData.userFileDelete("Hamit");
-        filePathData.specialUserFileProperties("Hamit");
+        //filePathData.specialUserFileProperties("Hamit");
     }
 } // end File

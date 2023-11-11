@@ -50,13 +50,14 @@ public class RegisterLoginServices {
         Long remainingNumber = null;
 
         System.out.println("\nLOGIN SAYFASI");
-        System.out.println("Emaili giriniz");
+        System.out.println("Emailinizi giriniz");
         uEmailAddress = klavye.nextLine();
         System.out.println("Sifreyi giriniz");
         uPassword = klavye.nextLine();
 
         // Email Find
         RegisterDto registerEmailFindDto = registerController.findByEmail(uEmailAddress);
+
         // Eğer Kullanıcı yoksa Register olsun
         if (registerEmailFindDto == null) {
             // Önce Kayıt olsun
@@ -150,7 +151,7 @@ public class RegisterLoginServices {
                     break;
                 case 8:
                     System.out.println("Hatalı Giriş Logları admin(+) writer(+) user(+)");
-                    logFailedLogin();
+                    logFailedLogin(registerDto.getuEmailAddress());
                     break;
                 case 9:
                     System.out.println("Üye Rolunüz admin(+) writer(+) user(+)");
@@ -158,19 +159,19 @@ public class RegisterLoginServices {
                     break;
                 case 10:
                     System.out.println("Dosya ekle admin(+) writer(+) ");
-                    specialFileCreate();
+                    specialFileCreate(registerDto.getuEmailAddress());
                     break;
                 case 11:
                     System.out.println("Dosya Listele admin(+) writer(+) ");
-                    specialFileList();
+                    specialFileList(registerDto.getuEmailAddress());
                     break;
                 case 12:
                     System.out.println("Dosya Silme admin(+) ");
-                    specialFileDelete();
+                    specialFileDelete(registerDto.getuEmailAddress());
                     break;
                 case 13:
                     System.out.println("Dosya Bilgileri admin(+) writer(+) ");
-                    specialFileInformation();
+                    specialFileInformation(registerDto.getuEmailAddress());
                     break;
                 case 14:
                     logout();
@@ -263,26 +264,41 @@ public class RegisterLoginServices {
     }
 
     //////////////////////////////////////////////////////////////////////////////////////
+
+    /*
+       // File fileDelete = new File(filePathData.url);
+        // System.out.println(new Date(fileDelete.lastModified()));
+        //filePathData.fileFind("deneme");
+        filePathData.specialUserFileCreate("Hamit");
+        filePathData.specialUserFileReader("Hamit");
+        filePathData.specialUserFileWriter("Hamit", "data44@gmail.com","şifre66");
+        //filePathData.userFileDelete("Hamit");
+        filePathData.specialUserFileProperties("Hamit");
+     */
     // FILE PROCESS
     // Kullanıcının girdiği yanlış denemeleri
-    private void logFailedLogin() {
-        filePathData.logFileReader();
+    private void logFailedLogin(String fileName) {
+        filePathData.specialUserFileReader(fileName);
     }
 
     // FILE CREATE
-    private void specialFileCreate() {
+    private void specialFileCreate(String fileName) {
+        filePathData.specialUserFileCreate(fileName);
     }
 
     // FILE LIST
-    private void specialFileList() {
+    private void specialFileList(String fileName) {
+        filePathData.specialFileFind(fileName);
     }
 
     // FILE DELETE
-    private void specialFileDelete() {
+    private void specialFileDelete(String fileName) {
+        filePathData.specialUserFileDelete(fileName);
     }
 
     // FILE INFORMATION
-    private void specialFileInformation() {
+    private void specialFileInformation(String fileName) {
+        filePathData.specialUserFileProperties(fileName);
     }
 
 } //end class
