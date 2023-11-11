@@ -115,7 +115,7 @@ public class RegisterLoginServices {
             System.out.println("\nADMIN SAYFASINA HOSGELDINIZ");
             System.out.println("Lütfen Seçiminizi yapınız");
             System.out.println("1-) Anasayfa\n2-) Kayıtlı Üyeleri Listele\n3-) Üye Ekle");
-            System.out.println("4-) Kayıtlı Üye ID bul \n5-)Kayıtlı Üye Email bul\n6-) Kayıtlı Üye Güncelle ");
+            System.out.println("4-) Kayıtlı Üye ID bul \n5-) Kayıtlı Üye Email bul\n6-) Kayıtlı Üye Güncelle ");
             System.out.println("7-) Kayıtlı Üye Sil \n8-) Hatalı Giriş Logları\n9-) Rolünüz");
             System.out.println("10-) Dosya Ekle \n11-) Dosya Listele\n12-) Dosya Sil");
             System.out.println("13-) Dosya Bilgileri \n14-) Çıkış");
@@ -131,7 +131,11 @@ public class RegisterLoginServices {
                     break;
                 case 3:
                     System.out.println("Üye Ekle admin(+)");
-                     RegisterDto createDto=  memberCreate();
+                    if(registerDto.getRolles().equals("admin")){
+                        RegisterDto createDto=  memberCreate();
+                    }else{
+                        System.out.println("Rolünüz: "+registerDto.getRolles()+" Ekleme yapamazsınız");
+                    }
                     break;
                 case 4:
                     System.out.println("Üye Bul ID admin(+) writer(+)");
@@ -154,8 +158,8 @@ public class RegisterLoginServices {
                     logFailedLogin(registerDto.getuEmailAddress());
                     break;
                 case 9:
-                    System.out.println("Üye Rolunüz admin(+) writer(+) user(+)");
                     String rolles=userRoles(registerDto.getRolles());
+                    System.out.println("Üye Rolunüz "+rolles);
                     break;
                 case 10:
                     System.out.println("Dosya ekle admin(+) writer(+) ");

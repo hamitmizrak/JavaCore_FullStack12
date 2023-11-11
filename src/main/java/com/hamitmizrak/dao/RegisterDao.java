@@ -127,7 +127,10 @@ public class RegisterDao implements IDaoGenerics<RegisterDto>, ICrypto {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, registerDto.getuNickName());
             preparedStatement.setString(2, registerDto.getuEmailAddress());
-            preparedStatement.setString(3, registerDto.getuPassword());
+
+            // Hashing Password
+            preparedStatement.setString(3, generateBCryptoPasswordEncoder(registerDto.getuPassword()) );
+
             preparedStatement.setString(4, registerDto.getRolles());
             preparedStatement.setLong(5, registerDto.getRemaingNumber());
             preparedStatement.setBoolean(6, registerDto.getPassive());
