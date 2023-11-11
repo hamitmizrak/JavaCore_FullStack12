@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="revize">
+    <list default="true" id="9dd41ec7-e0a0-4132-8c21-8d797c77f3c2" name="Changes" comment="Special">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/crypto/ICrypto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/crypto/ICrypto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/IUserFileData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hamitmizrak/services/RegisterLoginServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -520,12 +517,19 @@
       <option name="project" value="LOCAL" />
       <updated>1699710295473</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Special">
+      <option name="closed" value="true" />
+      <created>1699714864288</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1699714864288</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="String," />
     <MESSAGE value="Conditional" />
     <MESSAGE value="try catch  loop" />
     <MESSAGE value="static method" />
@@ -550,7 +554,8 @@
     <MESSAGE value="userFileList" />
     <MESSAGE value="userFileDelete" />
     <MESSAGE value="revize" />
-    <option name="LAST_COMMIT_MESSAGE" value="revize" />
+    <MESSAGE value="Special" />
+    <option name="LAST_COMMIT_MESSAGE" value="Special" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -622,7 +627,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java</url>
-          <line>316</line>
+          <line>317</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -666,6 +671,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hamitmizrak/files/FilePathData.java</url>
+          <line>199</line>
+          <properties class="com.hamitmizrak.files.FilePathData" method="userFileReader">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

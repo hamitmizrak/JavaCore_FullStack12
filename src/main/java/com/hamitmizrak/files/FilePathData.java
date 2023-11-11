@@ -180,9 +180,10 @@ public class FilePathData implements IUserFileData, ILogData {
     public String userFileWriter(String fileName, String email, String password) {
         // find
         File findData=  fileFind(fileName);
+        String data="";
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(findData.getPath(), true))) {
             String nowDate = logLocalDateTime();
-            String data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
+             data = "[ " + logLocalDateTime() + " ]" + email + " " + password;
             bufferedWriter.write(nowDate + "\n");
             bufferedWriter.write(data + "\n");
             bufferedWriter.flush();
@@ -314,6 +315,9 @@ public class FilePathData implements IUserFileData, ILogData {
         FilePathData filePathData = new FilePathData();
         // File fileDelete = new File(filePathData.url);
         // System.out.println(new Date(fileDelete.lastModified()));
-        filePathData.fileFind("deneme");
+        //filePathData.fileFind("deneme");
+        filePathData.userFileCreate("Hamit");
+        filePathData.userFileReader("Hamit");
+        filePathData.userFileWriter("Hamit", "data44@gmail.com","şifre66");
     }
 } // end File
